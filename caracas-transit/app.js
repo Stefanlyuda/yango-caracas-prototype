@@ -89,8 +89,8 @@ function renderHome() {
     setTimeout(() => state.maps.home.invalidateSize(), 60);
     return;
   }
-  const center = [10.4806, -66.9036]; // Caracas центр
-  const map = L.map(el, { zoomControl: false, attributionControl: false }).setView(center, 13);
+  const center = [10.4870, -66.8590]; // Las Mercedes, Caracas
+  const map = L.map(el, { zoomControl: false, attributionControl: false }).setView(center, 15);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 19
   }).addTo(map);
@@ -707,7 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Home: locate button → recenter map
   const locate = document.getElementById('home-locate');
   if (locate) locate.onclick = () => {
-    if (state.maps.home) state.maps.home.flyTo([10.4806, -66.9036], 14);
+    if (state.maps.home) state.maps.home.flyTo([10.4870, -66.8590], 15);
     toast('Centering on your location…');
   };
 
