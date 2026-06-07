@@ -746,9 +746,24 @@ body {
 .home-tile .ht-title { font-size: 13.5px; font-weight: 700; color: #1A1A1A; letter-spacing: -0.2px; line-height: 1.1; }
 .home-tile .ht-sub { font-size: 11px; color: #8C8C8C; margin-top: 1px; }
 
-/* Responsive (small screens) */
+/* Responsive (small screens) — open as a full-screen app */
 @media (max-width: 800px) {
-  body { flex-direction: column; padding: 10px; }
-  .app-info { max-width: 100%; }
-  .phone { transform: scale(0.85); transform-origin: top center; }
+  body { display: block; padding: 0; min-height: 100vh; background: #EDEDED; }
+  .app-info { display: none; }       /* hide the description panel on phones */
+  .phone {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;                  /* full viewport incl. dynamic toolbars */
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+  }
+  /* hide notch & home-bar fakes — the real device already has them */
+  .phone-notch { display: none; }
+  .home-indicator { display: none; }
+  /* status bar text would clash with the real OS bar — hide it */
+  .status-bar { display: none; }
+  /* push map below the real status bar / notch */
+  .home-topbar { top: max(54px, env(safe-area-inset-top, 20px)); }
 }
