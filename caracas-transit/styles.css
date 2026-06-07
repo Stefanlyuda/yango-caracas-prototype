@@ -622,21 +622,21 @@ body {
 /* Top bar over map */
 .home-topbar {
   position: absolute;
-  top: 56px; left: 14px;
-  display: flex; align-items: center; gap: 12px;
+  top: 54px; left: 14px;
+  display: flex; align-items: center; gap: 9px;
   background: #fff;
-  border-radius: 18px;
-  padding: 10px 16px 10px 12px;
+  border-radius: 14px;
+  padding: 7px 13px 7px 9px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.14);
   z-index: 600;
   max-width: calc(100% - 90px);
 }
-.home-bus { width: 46px; height: 46px; flex-shrink: 0;
+.home-bus { width: 32px; height: 32px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center; }
-.home-bus svg { width: 40px; height: 40px; }
+.home-bus svg { width: 28px; height: 28px; }
 .home-titlewrap { min-width: 0; }
-.home-title { font-size: 26px; font-weight: 800; color: #1A1A1A; line-height: 1.05; letter-spacing: -0.5px; }
-.home-address { font-size: 14px; color: #8C8C8C; font-weight: 500; margin-top: 2px;
+.home-title { font-size: 18px; font-weight: 800; color: #1A1A1A; line-height: 1.05; letter-spacing: -0.4px; }
+.home-address { font-size: 11.5px; color: #8C8C8C; font-weight: 500; margin-top: 1px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .home-address span { color: #1A1A1A; font-weight: 700; }
 
