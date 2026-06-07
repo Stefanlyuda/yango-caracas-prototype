@@ -500,7 +500,7 @@ body {
 /* Directions result */
 .dir-result-map {
   height: 320px;
-  background: linear-gradient(135deg, #C7D8B8 0%, #A8C19A 60%, #6FA4D8 100%);
+  background: linear-gradient(135deg, #FFE3DC 0%, #FFD0C4 55%, #FFB59E 100%);
   position: relative;
   flex-shrink: 0;
 }
@@ -630,9 +630,15 @@ body {
   box-shadow: 0 4px 18px rgba(0,0,0,0.14);
   z-index: 600;
 }
-.home-bus { width: 32px; height: 32px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center; }
-.home-bus svg { width: 28px; height: 28px; }
+.home-logo {
+  width: 38px; height: 38px; flex-shrink: 0;
+  background: var(--logo-bg); border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-style: italic; color: #fff;
+  font-size: 9px; letter-spacing: -0.3px; text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(252,63,29,0.35);
+}
+.home-logo span { transform: skewX(-6deg); display: inline-block; }
 .home-titlewrap { min-width: 0; }
 .home-title { font-size: 18px; font-weight: 800; color: #1A1A1A; line-height: 1.05; letter-spacing: -0.4px; }
 .home-address { font-size: 11.5px; color: #8C8C8C; font-weight: 500; margin-top: 1px;
@@ -736,7 +742,7 @@ body {
   transition: transform .12s, background .12s;
 }
 .home-tile:active { transform: scale(0.97); background: #ececed; }
-.home-tile svg { width: 24px; height: 24px; fill: #4F7383; flex-shrink: 0; }
+.home-tile svg { width: 24px; height: 24px; fill: var(--accent); flex-shrink: 0; }
 .home-tile .ht-title { font-size: 13.5px; font-weight: 700; color: #1A1A1A; letter-spacing: -0.2px; line-height: 1.1; }
 .home-tile .ht-sub { font-size: 11px; color: #8C8C8C; margin-top: 1px; }
 
