@@ -622,14 +622,13 @@ body {
 /* Top bar over map */
 .home-topbar {
   position: absolute;
-  top: 54px; left: 14px;
-  display: flex; align-items: center; gap: 9px;
+  top: 54px; left: 14px; right: 14px;
+  display: flex; align-items: center; gap: 11px;
   background: #fff;
-  border-radius: 14px;
-  padding: 7px 13px 7px 9px;
+  border-radius: 16px;
+  padding: 9px 16px 9px 11px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.14);
   z-index: 600;
-  max-width: calc(100% - 90px);
 }
 .home-bus { width: 32px; height: 32px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center; }
