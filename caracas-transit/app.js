@@ -371,7 +371,7 @@ function renderNearbyMap() {
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18 }).addTo(map);
   L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-  L.circleMarker(center, { radius: 7, color: '#A6B43E', weight: 3, fillColor: '#fff', fillOpacity: 1 })
+  L.circleMarker(center, { radius: 7, color: '#FC3F1D', weight: 3, fillColor: '#fff', fillOpacity: 1 })
     .addTo(map).bindPopup(`<b>${NEARBY_FROM.name}</b><br>Your location`);
 
   NEARBY_FROM.stops.forEach(stop => {
@@ -382,7 +382,7 @@ function renderNearbyMap() {
       <b>${escapeHtml(stop.name)}</b><br>
       #${stop.id} · ${stop.dist} m<br>
       Lines: ${stop.lines.join(', ')}<br>
-      <a href="javascript:void(0)" onclick="state.selectedStop='${escapeHtml(stop.name)}'; state.currentStopMeta=NEARBY_FROM.stops.find(s=>s.id==='${stop.id}'); go('stop-detail');" style="color:#A6B43E; font-weight:700;">View stop →</a>
+      <a href="javascript:void(0)" onclick="state.selectedStop='${escapeHtml(stop.name)}'; state.currentStopMeta=NEARBY_FROM.stops.find(s=>s.id==='${stop.id}'); go('stop-detail');" style="color:#FC3F1D; font-weight:700;">View stop →</a>
     `);
   });
   state.maps[id] = map;
@@ -538,7 +538,7 @@ function renderDirectionsResult() {
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18 }).addTo(map);
   L.marker(fromCoord).addTo(map).bindPopup('From: ' + from);
   L.marker(toCoord).addTo(map).bindPopup('To: ' + to);
-  L.polyline([fromCoord, toCoord], { color: '#A6B43E', weight: 4, dashArray: '8 8' }).addTo(map);
+  L.polyline([fromCoord, toCoord], { color: '#FC3F1D', weight: 4, dashArray: '8 8' }).addTo(map);
   map.fitBounds([fromCoord, toCoord], { padding: [30, 30] });
   state.maps[id] = map;
 
